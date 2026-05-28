@@ -1,6 +1,7 @@
 The MIT License
 
 Copyright (c) 2015-2017 Gabriele Grillo - gabry.grillo@alice.it, shakibonline - shakiba_9@yahoo.com (for the TelegramErrorLogger.php file)
+Copyright (c) 2026 Mahdyar Entezami - mahdyarEn@gmail.com (modernization and updates)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

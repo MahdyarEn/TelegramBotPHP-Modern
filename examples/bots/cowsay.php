@@ -1,11 +1,13 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Telegram Cowsay Bot Example.
  * Add @cowmooobot to try it!
  *
  * @author Gabriele Grillo <gabry.grillo@alice.it>
  */
-include 'Telegram.php';
+require_once __DIR__ . '/../../Telegram.php';
 
 // Set the bot TOKEN
 $bot_token = 'bot_token';
@@ -30,13 +32,13 @@ if ($text == '/start') {
     $telegram->sendMessage($content);
 }
 if ($text == '/cowsay' || $text == "\xF0\x9F\x90\xAE") {
-    $randstring = rand().sha1(time());
-    $cowurl = 'http://bangame.altervista.org/cowsay/fortune_image_w.php?preview='.$randstring;
+    $randstring = (string) rand() . sha1((string) time());
+    $cowurl = 'http://bangame.altervista.org/cowsay/fortune_image_w.php?preview=' . $randstring;
     $content = ['chat_id' => $chat_id, 'text' => $cowurl];
     $telegram->sendMessage($content);
 }
 if ($text == '/credit' || $text == 'Credit') {
-    $reply = "Eleirbag89 Telegram PHP API http://telegrambot.ienadeprex.com \nFrancesco Laurita (for the cowsay script) http://francesco-laurita.info/wordpress/fortune-cowsay-on-php-5";
+    $reply = "Based on Eleirbag89 TelegramBotPHP (MIT).\nFrancesco Laurita (for the cowsay script): http://francesco-laurita.info/wordpress/fortune-cowsay-on-php-5";
     $content = ['chat_id' => $chat_id, 'text' => $reply];
     $telegram->sendMessage($content);
 }
