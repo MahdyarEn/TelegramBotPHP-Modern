@@ -211,6 +211,15 @@ Original work is extended and modernized for PHP 8+ and newer Telegram Bot API f
 
 ---
 
+## 📬 Contact
+
+For questions, support, or contributions:
+
+* Telegram: [@mdyrm](https://t.me/mdyrm)
+
+---
+
 ## 📄 License
 
 MIT License — see LICENSE.md.
+
